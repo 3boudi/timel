@@ -191,4 +191,31 @@
 	kindcount.textContent = shownCount() + " sessions";
 	refresh();
 	setInterval(refresh, 30000);
+
+	/* Suppress Netlify "Powered by Netlify" injected badge & toolbar */
+	try {
+		localStorage.setItem("nl-hud:public:v1", JSON.stringify({ hidden: true }));
+		localStorage.setItem("nl-hud:public:v1", "true");
+	} catch (e) {}
+
+	const removeNetlifyWidgets = () => {
+		document.querySelectorAll('iframe, [id*="netlify" i], [class*="netlify" i]').forEach((el) => {
+			el.remove();
+		});
+		document.querySelectorAll('a, button, span').forEach((el) => {
+			if (el.textContent && el.textContent.trim().toLowerCase() === "powered by netlify") {
+				const wrapper = el.closest("div") || el;
+				if (wrapper !== document.body && !wrapper.contains(board)) {
+					wrapper.remove();
+				}
+			}
+		});
+	};
+	removeNetlifyWidgets();
+	if (typeof MutationObserver !== "undefined") {
+		new MutationObserver(removeNetlifyWidgets).observe(document.documentElement, {
+			childList: true,
+			subtree: true,
+		});
+	}
 })();

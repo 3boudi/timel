@@ -208,3 +208,16 @@ html.js body { padding-block-end: calc(var(--space-2xl) + var(--space-xl)); }
   .bar__label { display: none; }
   html.js body { padding-block-end: calc(var(--space-2xl) + var(--space-lg)); }
 }
+
+/* Suppress Netlify injected badge and floating widgets */
+iframe[src*="netlify"],
+iframe[id*="netlify"],
+div[id*="netlify"],
+div[class*="netlify"],
+[data-netlify-badge],
+.netlify-badge {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
