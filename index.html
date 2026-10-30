@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4-CSE week, Group 1, first semester 2026-2027</title>
+<meta name="description" content="Group 1's week for 4-CSE: every Course, TD and TP with rooms and teachers, plus the running class and the next one, live.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@400;500;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body id="top">
+
+<a class="skip" href="#week">Skip to the week</a>
+
+<header class="topnav">
+  <div class="container topnav__row">
+    <a class="mark" href="#top">4-CSE <span class="mark__side">week</span></a>
+    <a class="clockpill num" href="#week">
+      <span class="sq sq--live" aria-hidden="true"></span><span class="clockpill__word">Live</span>
+      <span id="clock"><span class="clockpill__bump"></span></span>
+    </a>
+    <nav class="topnav__nav" aria-label="Page sections">
+      <a href="#week">The week</a>
+      <a href="#today">Today</a>
+      <a href="#modules">Modules</a>
+      <a href="#answers">Answers</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" aria-labelledby="hero-h">
+  <div class="container">
+    <div class="corridor">
+      <h1 id="hero-h">Group one’s week, to the minute.</h1>
+      <p class="lead">Every Course, TD and TP of the semester, with rooms and teachers.</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#week">Open the board</a>
+        <a class="btn btn--ghost" href="#today">Today’s board</a>
+      </div>
+      <figure class="signplate">
+        <figcaption>The week opens</figcaption>
+        <p class="num">Sunday</p>
+        <p class="num">08h00</p>
+        <p class="num">SE1.11</p>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="week" class="section section--week" aria-labelledby="week-h">
+  <div class="container">
+    <div class="weekhead">
+      <div class="weekhead__intro">
+        <h2 id="week-h">The week</h2>
+        <p class="lead">Five days, six time slots.</p>
+      </div>
+      <div class="weekhead__controls">
+        <fieldset class="seg dayseg seg--days" aria-label="Pick the day on the board">
+          <legend class="visually-hidden">Pick the day on the board</legend>
+          <input type="radio" name="day" id="day-sun" value="sun" checked>
+          <label for="day-sun">Sunday</label>
+          <input type="radio" name="day" id="day-mon" value="mon">
+          <label for="day-mon">Monday</label>
+          <input type="radio" name="day" id="day-tue" value="tue">
+          <label for="day-tue">Tuesday</label>
+          <input type="radio" name="day" id="day-wed" value="wed">
+          <label for="day-wed">Wednesday</label>
+          <input type="radio" name="day" id="day-thu" value="thu">
+          <label for="day-thu">Thursday</label>
+        </fieldset>
+        <fieldset class="seg kindseg" aria-label="Show one kind of session">
+          <legend class="visually-hidden">Show one kind of session</legend>
+          <input type="radio" name="kind" id="k-all" value="all" checked>
+          <label for="k-all">All</label>
+          <input type="radio" name="kind" id="k-course" value="course">
+          <label for="k-course"><i class="sq sq--course" aria-hidden="true"></i>Course</label>
+          <input type="radio" name="kind" id="k-td" value="td">
+          <label for="k-td"><i class="sq sq--td" aria-hidden="true"></i>TD</label>
+          <input type="radio" name="kind" id="k-tp" value="tp">
+          <label for="k-tp"><i class="sq sq--tp" aria-hidden="true"></i>TP</label>
+        </fieldset>
+        <p class="kindcount" id="kindcount" role="status">18 in the week</p>
+      </div>
+    </div>
+
+    <ol class="board" data-kind="all">
+
+      <li class="day" data-day="sun">
+        <h3>Sunday</h3>
+        <ol class="slots">
+          <li class="slot ty-course" data-start="08:00" data-end="09:30">
+            <time class="slot__time num" datetime="08:00/09:30">08h00-09h30</time>
+            <p class="slot__module">High Performance Computing</p>
+            <p class="slot__meta"><span class="ty"><i class="sq sq--course" aria-hidden="true"></i>Course</span><span class="who">Boudjehem R</span></p>
+            <p class="slot__where num">SE1.11</p>
+          </li>
+          <li class="slot ty-td" data-start="09:30" data-end="11:00">
+            <time class="slot__time num" datetime="09:30/11:00">09h30-11h00</time>
+            <p class="slot__module">Knowledge Representation and Reasoning</p>
+            <p class="slot__meta"><span class="ty"><i class="sq sq--td" aria-hidden="true"></i>TD</span><span class="who">Benhamza</span></p>
+            <p class="slot__where num">SE2-9</p>
+          </li>
+          <li class="slot ty-course" data-start="12:30" data-end="14:00">
+            <time class="slot__time num" datetime="12:30/14:00">12h30-14h00</time>
+            <p class="slot__module">Modeling and simulation</p>
+            <p class="slot__meta"><span class="ty"><i class="sq sq--course" aria-hidden="true"></i>Course</span><span class="who">Kouahla N</span></p>
+            <p class="slot__where num">Amphi 3</p>
+          </li>
+          <li class="slot ty-course" data-start="14:00" data-end="15:30">
+            <time class="slot__time num" datetime="14:00/15:30">14h00-15h30</time>
+            <p class="slot__module">High Performance Computing</p>
+            <p class="slot__meta"><span class="ty"><i class="sq sq--course" aria-hidden="true"></i>Course</span><span class="who">Boudjehem R</span></p>
+            <p class="slot__where num">Amphi 3</p>
+          </li>
+        </ol>
+      </li>
+
+      <li class="day" data-day="mon">
+        <h3>Monday</h3>
+        <ol class="slots">
+          <li class="slot ty-tp" data-start="09:30" data-end="11:00">
+            <time class="slot__time num" datetime="09:30/11:00">09h30-11h00</time>
+            <p class="slot__module">Machine learning</p>
+            <p class="slot__meta"><span class="ty"><i class="sq sq--tp" aria-hidden="true"></i>TP</span><span class="who">Bordjiba Y</span></p>
+            <p class="slot__where num">SE2-11</p>
+          </li>
+          <li class="slot ty-course" data-start="11:00" data-end="12:30">
+            <time class="slot__time num" datetime="11:00/12:30">11h00-12h30</time>
+            <p class="slot__module">Writing techniques</p>
+            <p class="slot__meta"><span class="ty"><i class="sq sq--course" aria-hidden="true"></i>Course</span><span class="who">Hallaci S</span></p>
+            <p class="slot__where num">Amphi 2</p>
+          </li>
+          <li class="slot ty-td" data-start="12:30" data-end="14:00">
+            <time class="slot__time num" datetime="12:30/14:00">12h30-14h00</time>
+            <p class="slot__module">Operational research</p>
+            <p class="slot__meta"><span class="ty"><i class="sq sq--td" aria-hidden="true"></i>TD</span><span class="who">Lyna Beghidja</span></p>
+            <p class="slot__where num">SE2-8</p>
+          </li>
+          <li class="slot ty-course" data-start="14:00" data-end="15:30">
+            <time class="slot__time num" datetime="14:00/15:30">14h00-15h30</time>
+            <p class="slot__module">Machine learning</p>
+            <p class="slot__meta"><span class="ty"><i class="sq sq--course" aria-hidden="true"></i>Course</span><span class="who">Bordjiba Y</span></p>
+            <p class="slot__where num">Amphi 4</p>
+          </li>
+        </ol>
+      </li>
+
+      <li class="day" data-day="tue">
+        <h3>Tuesday</h3>
+        <ol class="slots">
+          <li class="slot ty-tp" data-start="09:30" data-end="11:00">
+            <time class="slot__time num" datetime="09:30/11:00">09h30-11h00</time>
+            <p class="slot__module">Business intelligence</p>
+            <p class="slot__meta"><span class="ty"><i class="sq sq--tp" aria-hidden="true"></i>TP</span><span class="who">Boughida A</span></p>
+            <p class="slot__where num">Internet Room medecin annex</p>
+          </li>
+          <li class="slot ty-course" data-start="11:00" data-end="12:30">
+            <time class="slot__time num" datetime="11:00/12:30">11h00-12h30</time>
+            <p class="slot__module">Knowledge Representation and Reasoning</p>
+            <p class="slot__meta"><span class="ty"><i class="sq sq--course" aria-hidden="true"></i>Course</span><span class="who">Benhamza</span></p>
+            <p class="slot__where num">Amphi 1</p>
+          </li>
+          <li class="slot ty-course" data-start="14:00" data-end="15:30">
+            <time class="slot__time num" datetime="14:00/15:30">14h00-15h30</time>
+            <p class="slot__module">Business intelligence</p>
+            <p class="slot__meta"><span class="ty"><i class="sq sq--course" aria-hidden="true"></i>Course</span><span class="who">Boughida A</span></p>
+            <p class="slot__where num">SE2-6</p>
+          </li>
+          <li class="slot ty-tp" data-start="15:30" data-end="17:00">
+            <time class="slot__time num" datetime="15:30/17:00">15h30-17h00</time>
+            <p class="slot__module">Knowledge Representation and Reasoning</p>
+            <p class="slot__meta"><span class="ty"><i class="sq sq--tp" aria-hidden="true"></i>TP</span><span class="who">Benhamza</span></p>
+            <p class="slot__where num">Online</p>
+          </li>
+        </ol>
+      </li>
+
+      <li class="day" data-day="wed">
+        <h3>Wednesday</h3>
+        <ol class="slots">
+          <li class="slot ty-td" data-start="08:00" data-end="09:30">
+            <time class="slot__time num" datetime="08:00/09:30">08h00-09h30</time>
+            <p class="slot__module">Modeling and simulation</p>
+            <p class="slot__meta"><span class="ty"><i class="sq sq--td" aria-hidden="true"></i>TD</span><span class="who">Kouahla N</span></p>
+            <p class="slot__where num">SE2-6</p>
+          </li>
+          <li class="slot ty-tp" data-start="09:30" data-end="11:00">
+            <time class="slot__time num" datetime="09:30/11:00">09h30-11h00</time>
+            <p class="slot__module">High Performance Computing</p>
+            <p class="slot__meta"><span class="ty"><i class="sq sq--tp" aria-hidden="true"></i>TP</span><span class="who">Boudjehem R</span></p>
+            <p class="slot__where num">SE3-12 SM</p>
+          </li>
+          <li class="slot ty-course" data-start="12:30" data-end="14:00">
+            <time class="slot__time num" datetime="12:30/14:00">12h30-14h00</time>
+            <p class="slot__module">Machine learning</p>
+            <p class="slot__meta"><span class="ty"><i class="sq sq--course" aria-hidden="true"></i>Course</span><span class="who">Bordjiba Y</span></p>
+            <p class="slot__where num">Amphi 2</p>
+          </li>
+        </ol>
+      </li>
+
+      <li class="day" data-day="thu">
+        <h3>Thursday</h3>
+        <ol class="slots">
+          <li class="slot ty-tp" data-start="09:30" data-end="11:00">
+            <time class="slot__time num" datetime="09:30/11:00">09h30-11h00</time>
+            <p class="slot__module">Writing techniques</p>
+            <p class="slot__meta"><span class="ty"><i class="sq sq--tp" aria-hidden="true"></i>TP</span><span class="who">Hallaci S</span></p>
+            <p class="slot__where num">Online</p>
+          </li>
+          <li class="slot ty-course" data-start="11:00" data-end="12:30">
+            <time class="slot__time num" datetime="11:00/12:30">11h00-12h30</time>
+            <p class="slot__module">Operational research</p>
+            <p class="slot__meta"><span class="ty"><i class="sq sq--course" aria-hidden="true"></i>Course</span><span class="who">Guerroui</span></p>
+            <p class="slot__where num">Amphi 4</p>
+          </li>
+          <li class="slot ty-tp" data-start="14:00" data-end="15:30">
+            <time class="slot__time num" datetime="14:00/15:30">14h00-15h30</time>
+            <p class="slot__module">Modeling and simulation</p>
+            <p class="slot__meta"><span class="ty"><i class="sq sq--tp" aria-hidden="true"></i>TP</span><span class="who">Kouahla N</span></p>
+            <p class="slot__where num">Online</p>
+          </li>
+        </ol>
+      </li>
+
+    </ol>
+  </div>
+</section>
+
+<section id="today" class="section section--band" aria-labelledby="today-h">
+  <div class="container">
+    <div class="bandhead">
+      <h2 id="today-h">Today’s board</h2>
+      <p class="chip" role="status" id="chip">Sunday</p>
+    </div>
+    <p class="bandnote">The board opens on Sunday; your browser’s clock picks the day and the hour.</p>
+    <table class="depart">
+      <caption class="visually-hidden">The day’s sessions, first to last, with the room for each.</caption>
+      <thead>
+        <tr><th scope="col">Session</th><th scope="col">Departs</th><th scope="col">Room</th></tr>
+      </thead>
+      <tbody id="depart-body">
+        <tr><td class="what">High Performance Computing <span class="whattag">Course</span></td><td class="when num">08h00</td><td class="where num">SE1.11</td></tr>
+        <tr><td class="what">Knowledge Representation and Reasoning <span class="whattag">TD</span></td><td class="when num">09h30</td><td class="where num">SE2-9</td></tr>
+        <tr><td class="what">Modeling and simulation <span class="whattag">Course</span></td><td class="when num">12h30</td><td class="where num">Amphi 3</td></tr>
+        <tr><td class="what">High Performance Computing <span class="whattag">Course</span></td><td class="when num">14h00</td><td class="where num">Amphi 3</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="modules" class="section" aria-labelledby="modules-h">
+  <div class="container">
+    <div class="rowhead">
+      <h2 id="modules-h">Who teaches what</h2>
+    </div>
+    <ol class="moduleslist">
+      <li><h3>High Performance Computing</h3><p class="modwho">Boudjehem R</p></li>
+      <li><h3>Knowledge Representation and Reasoning</h3><p class="modwho">Benhamza</p></li>
+      <li><h3>Modeling and simulation</h3><p class="modwho">Kouahla N</p></li>
+      <li><h3>Machine learning</h3><p class="modwho">Bordjiba Y</p></li>
+      <li><h3>Operational research</h3><p class="modwho">Guerroui and Lyna Beghidja</p></li>
+      <li><h3>Business intelligence</h3><p class="modwho">Boughida A</p></li>
+      <li><h3>Writing techniques</h3><p class="modwho">Hallaci S</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="answers" class="section section--answers" aria-labelledby="answers-h">
+  <div class="container answers">
+    <div class="answers__head">
+      <h2 id="answers-h">Short answers</h2>
+    </div>
+    <div class="answers__rows">
+      <div class="answer">
+        <h3>Do all groups share the timetable?</h3>
+        <p>Same modules in every group; only the slots move. This page is Group 1’s.</p>
+      </div>
+      <div class="answer">
+        <h3>What does online mean?</h3>
+        <p>It meets over the internet; three sessions run online.</p>
+      </div>
+      <div class="answer">
+        <h3>Which sheet is this?</h3>
+        <p>The department’s final dispatch sheet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__close">
+    <p class="signoff">Set for the first semester, 2026 to 2027.</p>
+    <dl class="fmeta">
+      <div><dt>Group</dt><dd>1, fourth year of the computer engineering diploma (CSE)</dd></div>
+      <div><dt>Department</dt><dd>Computer Science, Faculty of Mathematics, Computer Science and Material Science</dd></div>
+      <div><dt>Source</dt><dd>The department’s final dispatch sheet, FINAL_REDISPATCH_4-CSE</dd></div>
+    </dl>
+  </div>
+</footer>
+
+<aside class="bar" id="bar" role="status" aria-live="polite" aria-label="What is running now and what is next">
+  <div class="container bar__row">
+    <span class="sq sq--live" aria-hidden="true"></span>
+    <span class="bar__label" id="bar-label">The board below</span>
+    <span class="bar__what" id="bar-what">holds all 18 sessions</span>
+    <span class="bar__when num" id="bar-when">of the week</span>
+  </div>
+</aside>
+
+<script src="./script.js"></script>
+</body>
+</html>

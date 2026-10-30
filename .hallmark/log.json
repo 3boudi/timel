@@ -1,0 +1,30 @@
+[
+ {
+  "shape": "Marquee Hero",
+  "theme": "Wayfind",
+  "axes": "light/mono/cool",
+  "hero": "Corridor",
+  "nav": "bar led by the live-clock pill",
+  "footer": "letter close",
+  "imagery": "none",
+  "fingerprint": "weekly-university-timetable-4th-3ade",
+  "entry": "Group 1 week: 18 real sessions from the Excel sheet, Course TD TP filters, day switcher, live clock and live bar",
+  "sections": [
+   "Hero (the sign plate)",
+   "The week (day switcher, kind filter)",
+   "Todays board (ink departures)",
+   "Who teaches what (7 modules)",
+   "Short answers (3)",
+   "Letter close footer"
+  ],
+  "signature": "the sign plate with amber figures at the platform edge; the running class paints cobalt",
+  "job": "attend",
+  "genre": "modern-minimal",
+  "waived": [
+   "23"
+  ],
+  "prompt": "Weekly university timetable website for 4CSE Group 1 Course TD TP sessions with rooms teachers and live highlight",
+  "date": "2026-10-30",
+  "mode": "build"
+ }
+]
