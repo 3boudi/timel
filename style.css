@@ -26,7 +26,7 @@ body:has(.skip:focus-visible) { scroll-behavior: smooth; }
 /* Squares: the network's line colours */
 .sq { display: inline-block; inline-size: 9px; block-size: 9px; border: var(--rule-hair) solid var(--color-ink); flex-shrink: 0; }
 .sq--course { background: var(--color-ink); }
-.sq--td { background: transparent; }
+.sq--td { background: var(--color-accent); border-color: var(--color-accent); }
 .sq--tp { background: var(--color-accent-2); }
 .sq--live { background: var(--color-accent); border-color: var(--color-accent); animation: blink-in var(--dur-long) var(--ease-out) 1 both; }
 @keyframes blink-in { from { transform: scale(0); } to { transform: scale(1); } }
@@ -102,6 +102,12 @@ html.js body { padding-block-end: calc(var(--space-2xl) + var(--space-xl)); }
 .board.is-day-on .slot__where { grid-area: where; text-align: end; }
 
 /* Filtering: the chosen kind stays, the rest recedes */
+.ty-td { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-accent-ink); }
+.ty-td .slot__time { color: var(--color-paper); opacity: 0.75; }
+.ty-td .slot__meta { color: var(--color-paper); }
+.ty-td .sq--td { background: var(--color-paper); border-color: var(--color-paper); }
+.slot.ty-td.is-live { box-shadow: inset 0 0 0 var(--rule-bar) var(--color-paper); background: var(--color-accent); }
+.slot.ty-td.is-live .slot__time { color: var(--color-paper); opacity: 1; }
 .board[data-kind="course"] .slot:not(.ty-course) { opacity: 0.18; }
 .board[data-kind="td"] .slot:not(.ty-td) { opacity: 0.18; }
 .board[data-kind="tp"] .slot:not(.ty-tp) { opacity: 0.18; }

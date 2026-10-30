@@ -68,10 +68,10 @@
 
 	/* Shared helpers, hoisted so the handlers above resolve */
 	function dayInputs() {
-		return Array.from(board.querySelectorAll('input[name="day"]'));
+		return Array.from(document.querySelectorAll('input[name="day"]'));
 	}
 	function kindInputs() {
-		return Array.from(board.querySelectorAll('input[name="kind"]'));
+		return Array.from(document.querySelectorAll('input[name="kind"]'));
 	}
 	function shownDays() {
 		return board.classList.contains("is-day-on")
